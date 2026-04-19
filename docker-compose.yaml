@@ -3,35 +3,44 @@ version: "3.8"
 services:
   keycloak:
     extends:
-      file: auth/keycloak.yaml
+      file: auth/docker-compose.keycloak.yaml
       service: keycloak
 
   redis:
     extends:
-      file: cache/redis.yaml
+      file: cache/docker-compose.redis.yaml
       service: redis
 
   mongodb:
     extends:
-      file: db/mongodb.yaml
+      file: db/docker-compose.mongodb.yaml
       service: mongodb
 
   oracle-db:
     extends:
-      file: db/oracle.yaml
+      file: db/docker-compose.oracle.yaml
       service: oracle-db
 
   loki:
     extends:
-      file: logs/grafana.yaml
+      file: logs/docker-compose.grafana.yaml
       service: loki
 
   grafana:
     extends:
-      file: logs/grafana.yaml
+      file: logs/docker-compose.grafana.yaml
       service: grafana
 
   wiremock:
     extends:
-      file: wiremock/wiremock.yaml
+      file: wiremock/docker-compose.wiremock.yaml
       service: wiremock
+
+volumes:
+  keycloak-data:
+  redis-data:
+  mongo-data:
+  oracle-data:
+  grafana-data:
+  loki-data:
+  wiremock-data:

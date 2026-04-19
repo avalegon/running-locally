@@ -21,6 +21,3 @@ services:
       - mongo-data:/data/db
 
     restart: unless-stopped
-
-volumes:
-  mongo-data:

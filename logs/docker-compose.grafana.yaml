@@ -28,7 +28,3 @@ services:
       - grafana-data:/var/lib/grafana
     depends_on:
       - loki
-
-volumes:
-  grafana-data:
-  loki-data:

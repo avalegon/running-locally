@@ -19,6 +19,3 @@ services:
       - redis-data:/data
 
     restart: unless-stopped
-
-volumes:
-  redis-data:

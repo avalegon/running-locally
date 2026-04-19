@@ -21,6 +21,3 @@ services:
       - keycloak-data:/opt/keycloak/data
 
     restart: unless-stopped
-
-volumes:
-  keycloak-data:

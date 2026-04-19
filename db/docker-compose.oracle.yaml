@@ -29,6 +29,3 @@ services:
       resources:
         limits:
           memory: 2g
-
-volumes:
-  oracle-data:
