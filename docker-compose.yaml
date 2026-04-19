@@ -1,0 +1,37 @@
+version: "3.8"
+
+services:
+  keycloak:
+    extends:
+      file: auth/keycloak.yaml
+      service: keycloak
+
+  redis:
+    extends:
+      file: cache/redis.yaml
+      service: redis
+
+  mongodb:
+    extends:
+      file: db/mongodb.yaml
+      service: mongodb
+
+  oracle-db:
+    extends:
+      file: db/oracle.yaml
+      service: oracle-db
+
+  loki:
+    extends:
+      file: logs/grafana.yaml
+      service: loki
+
+  grafana:
+    extends:
+      file: logs/grafana.yaml
+      service: grafana
+
+  wiremock:
+    extends:
+      file: wiremock/wiremock.yaml
+      service: wiremock
