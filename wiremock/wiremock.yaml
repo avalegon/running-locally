@@ -12,8 +12,9 @@ services:
       # Onde ficam os mocks (requests/responses)
       - ./wiremock:/home/wiremock
 
-    command: >
-      --verbose
-      --global-response-templating
+    command: [
+      "--verbose",
+      "--global-response-templating"
+    ]
 
     restart: unless-stopped
