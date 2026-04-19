@@ -10,7 +10,7 @@ services:
 
     volumes:
       # Onde ficam os mocks (requests/responses)
-      - ./wiremock:/home/wiremock
+      - wiremock-data:/home/wiremock
 
     command: [
       "--verbose",
