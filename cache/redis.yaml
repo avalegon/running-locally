@@ -8,11 +8,12 @@ services:
     ports:
       - "6379:6379" # Porta padrão do Redis
 
-    command: >
-      redis-server
-      --requirepass 123456789      # Define senha
-      --appendonly yes             # Habilita persistência (AOF - Append Only File)
-
+    command: [
+      "redis-server",
+      "--requirepass", "123456789",      # Define senha
+      "--appendonly", "yes"             # Habilita persistência (AOF - Append Only File)
+    ]
+    
     volumes:
       # Salva os dados em disco
       - redis-data:/data
