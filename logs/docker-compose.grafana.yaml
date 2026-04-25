@@ -13,7 +13,7 @@ services:
     ]
 
     volumes:
-      - loki-data:/loki
+      - loki-data:/home/loki
 
   # 📊 Grafana - dashboards e visualização
   grafana:
@@ -23,8 +23,8 @@ services:
       - "3000:3000"
     environment:
       - GF_SECURITY_ADMIN_USER=admin
-      - GF_SECURITY_ADMIN_PASSWORD=admin
+      - GF_SECURITY_ADMIN_PASSWORD=123456789
     volumes:
-      - grafana-data:/var/lib/grafana
+      - grafana-data:/home/grafana
     depends_on:
       - loki
